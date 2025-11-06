@@ -5,27 +5,25 @@ project:
       1. Deploying an EC2 instance with Nginx.
       2. Building a modular AWS infrastructure including EC2, S3, and DynamoDB.
 
-repository_structure: |
-  terraform/
-  └── ec2/
-      ├── ec2.tf
-      ├── variables.tf
-      ├── output.tf
-      ├── terraform.tf
-      ├── providers.tf
-      ├── install_nginx.sh
-      ├── .gitignore
-      └── README.md
+repository_structure:
+  terraform_ec2:
+    - ec2.tf
+    - variables.tf
+    - output.tf
+    - terraform.tf
+    - providers.tf
+    - install_nginx.sh
+    - .gitignore
+    - README.md
 
-  terraform-modules/
-  └── infra-app/
-      ├── ec2.tf
-      ├── s3.tf
-      ├── dynamodb.tf
-      ├── variables.tf
-      ├── providers.tf
-      ├── terraform.tf
-      └── main.tf
+  terraform_modules_infra_app:
+    - ec2.tf
+    - s3.tf
+    - dynamodb.tf
+    - variables.tf
+    - providers.tf
+    - terraform.tf
+    - main.tf
 
 projects:
   - name: "Project 1 — EC2 with Nginx"
@@ -60,6 +58,10 @@ projects:
     features: |
       - Uses variables for environment, instance type, and naming.
       - Dynamically adds random suffixes to S3 bucket names to avoid global conflicts.
+    examples: |
+      dev-infra-app-bucket-3ab4fcd2
+      stg-infra-app-bucket-5c12e7a9
+      prd-infra-app-bucket-7d91e2a4
 
 cleanup:
   command: |
@@ -89,4 +91,5 @@ support:
   - "⭐ Give it a star on GitHub"
   - "🍴 Fork it to experiment"
   - "💬 Share feedback to improve further"
+
 
