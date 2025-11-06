@@ -58,10 +58,6 @@ projects:
     features: |
       - Uses variables for environment, instance type, and naming.
       - Dynamically adds random suffixes to S3 bucket names to avoid global conflicts.
-    examples: |
-      dev-infra-app-bucket-3ab4fcd2
-      stg-infra-app-bucket-5c12e7a9
-      prd-infra-app-bucket-7d91e2a4
 
 cleanup:
   command: |
@@ -91,5 +87,6 @@ support:
   - "⭐ Give it a star on GitHub"
   - "🍴 Fork it to experiment"
   - "💬 Share feedback to improve further"
+
 
 
