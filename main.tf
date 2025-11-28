@@ -16,7 +16,7 @@ module "prd-infra" {
     env = "prd"
     bucket_name = "infra-app-bucket"
     instance_count = 2
-    instance_type = "t2.micro"
+    instance_type = "t2.large"
     ec2_ami_id = "ami-0f5fcdfbd140e4ab7"
     hash_key = "studentID"
 
@@ -28,7 +28,7 @@ module "stg-infra" {
     env = "stg"
     bucket_name = "infra-app-bucket"
     instance_count = 1
-    instance_type = "t2.micro"
+    instance_type = "t2.medium"
     ec2_ami_id = "ami-0f5fcdfbd140e4ab7"
     hash_key = "studentID"
 
